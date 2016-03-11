@@ -19,6 +19,5 @@ Meth0dMan is a [Burp Suite](http://www.portswigger.net/burp/) extension to aide 
 5. Set the first payload to HTTP Verbs
 6. Set the second payload to "Extension-generated"
 7. Select generator, choose "Meth0dMan Payloads" from the drop down list
-8. Ensure you have URL encoding ** off ** and start fuzzing!  
+8. Ensure you have URL encoding **off** and start fuzzing!  
 ![Extension Generated Payloads](http://i.imgur.com/wchdCKV.png)
-
