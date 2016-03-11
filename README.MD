@@ -1,6 +1,6 @@
 #Meth0dMan
 
-Meth0dMan is a [Burp Suite](http://www.portswigger.net/burp/) extension to aide in testing [HTTP Methods](https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)). It generates a custom intruder payload based on the hosts site-map, allowing quick identification of several HTTP Method issues. 
+Meth0dMan is a [Burp Suite](http://www.portswigger.net/burp/) extension to aid in testing [HTTP Methods](https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)). It generates a custom intruder payload based on the hosts site-map, allowing quick identification of several HTTP Method issues. 
 
 ##Features
 
