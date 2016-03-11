@@ -11,7 +11,7 @@ Meth0dMan is a [Burp Suite](http://www.portswigger.net/burp/) extension to aide 
 
 ##How To Use It
 
-1. From the _Extender_ tab in Burp Suite,  add [Meth0dMan.jar](https://github.com/) 
+1. From the _Extender_ tab in Burp Suite, add [Meth0dMan.jar](https://github.com/AOCorsaire/Meth0dMan/releases) 
 2. Spider or discover content on site to build the site-map
 3. Send a request Meth0dMan (creates a new intruder attack)
 ![Send to Meth0dMan](http://i.imgur.com/zdpQnwA.png)
