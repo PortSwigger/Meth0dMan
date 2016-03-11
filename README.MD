@@ -13,10 +13,10 @@ Meth0dMan is a [Burp Suite](http://www.portswigger.net/burp/) extension to aid i
 
 1. From the _Extender_ tab in Burp Suite, add [Meth0dMan.jar](https://github.com/AOCorsaire/Meth0dMan/releases) 
 2. Spider or discover content on site to build the site-map
-3. Send a request Meth0dMan (creates a new intruder attack)
+3. Send a request to Meth0dMan (creates a new intruder attack)
 ![Send to Meth0dMan](http://i.imgur.com/zdpQnwA.png)
 4. Adjust the attack Type to 'Cluster Bomb'
-5. Set the first payload to HTTP Verbs
+5. Set the first payload to HTTP Verbs List (or your own verbs)
 6. Set the second payload to "Extension-generated"
 7. Select generator, choose "Meth0dMan Payloads" from the drop down list
 8. Ensure you have URL encoding **off** and start fuzzing!  
