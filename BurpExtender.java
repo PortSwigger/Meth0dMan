@@ -50,11 +50,11 @@ public class BurpExtender implements IBurpExtender, IContextMenuFactory,IIntrude
 						//grab request
 						IHttpRequestResponse first = item[0];
 						//ternary operator return false is http, else return true
-						Boolean is_secure = (first.getProtocol().toString() == "http") ? false : true;
+						Boolean is_secure = (first.getHttpService().getProtocol().toString() == "http") ? false : true;
 						//set payload positions as method and root node
 						List<int[]> payload_positions = getPayloadPos(first);
 						//create a new intruder with selected 
-						mycallbacks.sendToIntruder(first.getHost(),first.getPort(), is_secure, first.getRequest(),payload_positions);
+						mycallbacks.sendToIntruder(first.getHttpService().getHost(),first.getHttpService().getPort(), is_secure, first.getRequest(),payload_positions);
 					}
 				}
 			});
@@ -69,7 +69,7 @@ public class BurpExtender implements IBurpExtender, IContextMenuFactory,IIntrude
 		//get all relevant positions 
 		int[] method_pos = getHttpMethod(first);
 		int start_dir = method_pos[1] + 1;
-		int end_dir = start_dir + first.getUrl().getPath().length();
+		int end_dir = start_dir + mycallbacks.getHelpers().analyzeRequest(first).getUrl().getPath().length();
 		int[] dir_pos = { start_dir, end_dir };
 		//push all to final List
 		List<int[]> payload_positions = new ArrayList<int[]>();
@@ -83,7 +83,7 @@ public class BurpExtender implements IBurpExtender, IContextMenuFactory,IIntrude
 		IHttpRequestResponse mytree[] = mycallbacks.getSiteMap(url);
 		HashSet<String> dirs = new HashSet<String>();
 		for (IHttpRequestResponse req : mytree) {
-			String temp = req.getUrl().getPath();
+			String temp = mycallbacks.getHelpers().analyzeRequest(req).getUrl().getPath();
 			if (temp.contains(".")) {
 				//remove any files/extensions
 				temp = temp.substring(0, temp.lastIndexOf('/') + 1);
