@@ -8,4 +8,4 @@ ProOnly: False
 Author: Alexis Vanden Eijnde
 ShortDescription: Generate a custom intruder payload based on the host's site-map, allowing quick identification of several HTTP Method issues
 EntryPoint: build/libs/meth0d-man-all.jar
-BuildCommand: gradle -PburpJar=$BURP_JAR fatJar
+BuildCommand: gradle fatJar
