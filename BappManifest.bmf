@@ -6,6 +6,6 @@ SerialVersion: 0
 MinPlatformVersion: 0
 ProOnly: False
 Author: Alexis Vanden Eijnde
-ShortDescription: Generate a custom intruder payload based on the host's site-map, allowing quick identification of several HTTP Method issues
+ShortDescription: Generates custom Intruder payloads based on the site map.
 EntryPoint: build/libs/meth0d-man-all.jar
 BuildCommand: gradle fatJar
